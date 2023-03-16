@@ -8,7 +8,7 @@ const productreducer = (state = initialstate, action) => {
     switch (action.type) {
         case MAKE_ORDER: return {
             ...state,
-            noOfProducts: state.noOfProducts - 1
+            noOfProducts: state.noOfProducts - 2
         }
         default: return state
     }

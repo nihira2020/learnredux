@@ -1,6 +1,6 @@
 
 import { MAKE_ORDER } from './ActionTypes'
-const makeOrder = () => {
+export const makeOrder = () => {
     return {
         type: MAKE_ORDER
     }
