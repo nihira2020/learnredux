@@ -1,16 +1,47 @@
-import { MAKE_ORDER } from "./ActionTypes"
+import { BUY_BAT, BUY_PAD, MAKE_ORDER } from "./ActionTypes"
 
 const initialstate = {
-    noOfProducts: 100
+    noOfBats: 100,
+    noOfPads: 50
 }
 
-const productreducer = (state = initialstate, action) => {
+const initialbatstate={
+    noOfBats: 100
+}
+const initialpadstate={
+    noOfPads: 100
+}
+
+export const productreducer = (state = initialstate, action) => {
     switch (action.type) {
-        case MAKE_ORDER: return {
+        case BUY_BAT: return {
             ...state,
-            noOfProducts: state.noOfProducts - 2
+            noOfBats: state.noOfBats - 1
+        }
+        case BUY_PAD: return {
+            ...state,
+            noOfPads: state.noOfPads - 1
         }
         default: return state
     }
 }
-export default productreducer;
+export const batreducer = (state = initialstate, action) => {
+    switch (action.type) {
+        case BUY_BAT: return {
+            ...state,
+            noOfBats: state.noOfBats - 1
+        }
+        default: return state
+    }
+}
+export const padreducer = (state = initialstate, action) => {
+    switch (action.type) {
+       
+        case BUY_PAD: return {
+            ...state,
+            noOfPads: state.noOfPads - 1
+        }
+        default: return state
+    }
+}
+//export default productreducer;

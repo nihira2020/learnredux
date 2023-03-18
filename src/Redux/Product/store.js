@@ -1,6 +1,8 @@
 //import {legacy_createStore} from 'redux'
-import {configureStore} from '@reduxjs/toolkit'
-import productreducer from './ProductReducer'
+import {combineReducers, configureStore} from '@reduxjs/toolkit'
+import {batreducer,padreducer} from './ProductReducer'
 
-const store=configureStore({reducer:productreducer});
+const rootreducer=combineReducers({bat:batreducer,pad:padreducer})
+
+const store=configureStore({reducer:rootreducer});
 export default store;
