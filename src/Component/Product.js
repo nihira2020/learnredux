@@ -10,7 +10,7 @@ const Product = () => {
             <h1>Hooks Example</h1>
             <div>
             <h3>Available Cricket Bat: {noOfBats} </h3>
-            <button onClick={()=>{dispatch(makeOrder(BUY_PAD))}}>Buy Bat</button>
+            <button onClick={()=>{dispatch(makeOrder(BUY_BAT))}}>Buy Bat</button>
             </div>
         </div>
      );

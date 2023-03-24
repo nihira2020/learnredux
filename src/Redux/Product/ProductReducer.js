@@ -29,7 +29,7 @@ export const batreducer = (state = initialstate, action) => {
     switch (action.type) {
         case BUY_BAT: return {
             ...state,
-            noOfBats: state.noOfBats - 1
+            noOfBats: state.noOfBats - action.payload
         }
         default: return state
     }
